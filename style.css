@@ -125,6 +125,7 @@ h1 {
     font-size: 1.7rem;
     font-weight: 900;
     margin-block: 0.7rem 0.1rem;
+    color: var(--DARK-BLUE)
 }
 
 .description {
@@ -137,7 +138,7 @@ h1 {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 1.4rem 1rem;
+    padding: 1.5rem;
     background-color: var(--VERY-PALE-BLUE);
     border-radius: 0.7rem;
 }
@@ -153,6 +154,7 @@ h1 {
 
 .plan {
     font-weight: 900;
+    color: var(--DARK-BLUE);
 }
 
 .price {
