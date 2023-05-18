@@ -96,7 +96,7 @@ h6 {
 }
 
 .card-container {
-    width: min(89%, 24rem);
+    width: min(89%, 28rem);
     border-radius: var(--BORDER-RADIUS-SIZE);
     box-shadow: 0 12px 18px 1px hsla(224, 23%, 55%, 0.2);
 }
@@ -217,12 +217,7 @@ h1 {
     }
 
     .payment-button {
-        font-size: 0.8rem;
         font-weight: 700;
         padding-block: 0.8rem;
-    }
-
-    .cancel {
-        font-size: 0.8rem;
     }
 }
