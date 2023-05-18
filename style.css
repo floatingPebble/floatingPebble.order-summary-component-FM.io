@@ -1,0 +1,228 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+    height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+
+    background: url(images/pattern-background-mobile.svg) no-repeat center top fixed;
+    background-size: 100% auto;
+    background-color: var(--PALE-BLUE);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+    isolation: isolate;
+}
+
+:root {
+    --PALE-BLUE: hsl(225, 100%, 94%);
+    --BRIGHT-BLUE: hsl(245, 75%, 52%);
+    --VERY-PALE-BLUE: hsl(225, 100%, 98%);
+    --DESATURATED-BLUE: hsl(224, 23%, 55%);
+    --DARK-BLUE: hsl(223, 47%, 23%);
+
+    --BORDER-RADIUS-SIZE: 16px;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+}
+
+.card-container {
+    width: min(89%, 24rem);
+    border-radius: var(--BORDER-RADIUS-SIZE);
+    box-shadow: 0 12px 18px 1px hsla(224, 23%, 55%, 0.2);
+}
+
+.header-svg {
+    border-top-left-radius: var(--BORDER-RADIUS-SIZE);
+    border-top-right-radius: var(--BORDER-RADIUS-SIZE);
+}
+
+.card-main {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    border-bottom-left-radius: var(--BORDER-RADIUS-SIZE);
+    border-bottom-right-radius: var(--BORDER-RADIUS-SIZE);
+}
+
+.card-main> :not(:first-child) {
+    margin-block: 0.8rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-top: 0.7rem;
+}
+
+.description {
+    color: var(--DESATURATED-BLUE);
+    padding-inline: 0.29rem;
+}
+
+.payment-plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--VERY-PALE-BLUE);
+    border-radius: 0.7rem;
+}
+
+.left-side {
+    display: flex;
+}
+
+.annual-plan-and-price {
+    line-height: 1.5;
+    margin-left: 1rem;
+}
+
+.plan {
+    font-weight: 900;
+}
+
+.price {
+    color: var(--DESATURATED-BLUE);
+}
+
+.change-payment,
+.change-payment:visited {
+    color: var(--BRIGHT-BLUE);
+    font-size: 0.8rem;
+    font-weight: 900;
+}
+
+.change-payment:hover,
+.change-payment:focus {
+    color: var(--DESATURATED-BLUE);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.payment-button {
+    width: 100%;
+    border-radius: 0.7rem;
+    padding-block: 0.8rem;
+    border: none;
+    color: white;
+    background-color: var(--BRIGHT-BLUE);
+    box-shadow: 0 12px 18px 1px hsla(224, 23%, 55%, 0.45);
+    font-size: 0.9rem;
+}
+
+.payment-button:hover,
+.payment-button:focus {
+    background-color: var(--DESATURATED-BLUE);
+    cursor: pointer;
+}
+
+.cancel {
+    text-decoration: none;
+    color: var(--DESATURATED-BLUE);
+    font-weight: 900;
+}
+
+.cancel:hover,
+.cancel:focus {
+    cursor: pointer;
+    color: black;
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        background: url(images/pattern-background-desktop.svg) no-repeat center top fixed;
+        background-color: var(--PALE-BLUE);
+    }
+
+    .card-main {
+        padding: 1.3rem 2.5rem;
+    }
+
+    .payment-plan {
+        padding-block: 1.1;
+    }
+
+    .payment-button {
+        font-size: 0.8rem;
+        font-weight: 700;
+        padding-block: 0.8rem;
+    }
+
+    .cancel {
+        font-size: 0.8rem;
+    }
+}
