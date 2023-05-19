@@ -31,8 +31,9 @@ body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
 
-    background: url(images/pattern-background-mobile.svg) no-repeat center top fixed;
-    background-size: 100% auto;
+    background: url(images/pattern-background-mobile.svg), #E1E9Ff;
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain;
     background-color: var(--PALE-BLUE);
     display: flex;
     justify-content: center;
@@ -206,7 +207,9 @@ h1 {
 
 @media screen and (min-width: 600px) {
     body {
-        background: url(images/pattern-background-desktop.svg) no-repeat center top fixed;
+        background: url(images/pattern-background-desktop.svg), #E1E9Ff;
+        background-repeat: no-repeat, no-repeat;
+        background-size: contain;
         background-color: var(--PALE-BLUE);
     }
 
